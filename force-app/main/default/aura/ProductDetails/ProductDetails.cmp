@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+  <lightning:card title="Case Contact Details">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>{!v.case.contact.name}</td>
+        <td>{!v.case.contact.phone}</td>
+        <td>{!v.case.contact.email}</td>
+      </tr>
+    </table>
+  </lightning:card>
+</aura:component>

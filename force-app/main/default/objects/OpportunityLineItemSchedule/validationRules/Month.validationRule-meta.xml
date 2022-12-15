@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month</fullName>
+    <active>true</active>
+    <errorConditionFormula>if(AND(OR(
+month(ScheduleDate)&lt;month(OpportunityLineItem.Product2.Selling_Start_Date__c),month(ScheduleDate)&gt;month(OpportunityLineItem.Product2.Selling_End_Date__c))
+,OpportunityLineItem.Product2.RecordType.Name=&apos;Seasonal Product&apos;),true,false)</errorConditionFormula>
+    <errorMessage>Cannot Sell this product in this time, Please check the product selling dates</errorMessage>
+</ValidationRule>

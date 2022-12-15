@@ -1,0 +1,25 @@
+<template>
+    
+     <lightning-card title="Leave Request" icon-name="standard:record">
+        <template if:true={user}>
+                <div style="margin-left:5px;width:50%;display:inline">
+            Current Balance : {user.Current_Balance__c}
+        </div>
+        <div style="float:right;width:50%;display:inline">
+              Vacation Days : {user.Vacation_Days__c}
+         </div>
+          </template>
+        <div class="slds-m-around_medium">
+            <lightning-input type="Date" required label="start date" onchange={StartdateChange} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-input type="Date" required label="End Date" onchange={EndDateChange} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-input  required label="Type" onchange={TypeChange} class="slds-m-bottom_x-small"></lightning-input>
+           <!-- Id: {user.Id}<br/>
+            Number of Vacations : {User.vacation_Days__c}<br/>-->
+           
+            <lightning-button label="Submit Request" variant="brand" onclick={createLR}></lightning-button>
+        </div>
+        
+    
+     </lightning-card>
+     
+</template>

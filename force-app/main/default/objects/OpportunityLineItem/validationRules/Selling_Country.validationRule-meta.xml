@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Selling_Country</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(  Product2.RecordType.Name =&apos;Seasonal Product&apos; &amp;&amp;((Opportunity.Account.ShippingCountry  = &apos;Canada&apos; &amp;&amp;  Product2.Canada__c=False ) || (Opportunity.Account.ShippingCountry  = &apos;Denmark&apos; &amp;&amp;  Product2.Denmark__c=False) || (Opportunity.Account.ShippingCountry  = &apos;Finland&apos; &amp;&amp;  Product2.Finland__c=False) || (Opportunity.Account.ShippingCountry  = &apos;Norway&apos; &amp;&amp; Product2.Norway__c =False) || (Opportunity.Account.ShippingCountry  = &apos;Singapore&apos; &amp;&amp;  Product2.Singapore__c=False) || (Opportunity.Account.ShippingCountry  = &apos;Germany&apos; &amp;&amp;  Product2.Germany__c=False) || (Opportunity.Account.ShippingCountry  = &apos;Taiwan&apos; &amp;&amp;  Product2.Taiwan__c=False)),true,false)</errorConditionFormula>
+    <errorMessage>This product is not authorized for this Region</errorMessage>
+</ValidationRule>

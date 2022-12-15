@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scandanvia__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Product2.Norway__c ||  Product2.Denmark__c ||   Product2.Finland__c ,true,false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Scandanvia</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
